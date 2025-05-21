@@ -1,5 +1,4 @@
 # behavior-epi-models
-# behavior-epi-models
 
 This file contains information for the code used to create all figures and carry out analyses in the publications [1]. MATLAB versions used were 2019a, 2023a, and 2024a. Descriptions of the code in each folder are below:
 
