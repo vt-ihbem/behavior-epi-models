@@ -1,0 +1,342 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12030,        334]
+NotebookOptionsPosition[     10254,        298]
+NotebookOutlinePosition[     10627,        314]
+CellTagsIndexPosition[     10584,        311]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Finds", " ", "solution", " ", "sets", " ", "for", " ", "SEIRb", " ", 
+    "model"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"SEIRb", "=", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"alpha", "-", "alphahat"}], ",", " ", 
+     RowBox[{"beta", "-", "betahat"}], ",", 
+     RowBox[{"tauF", "-", "tauFhat"}], ",", " ", 
+     RowBox[{
+      RowBox[{"tauI", "*", "tauE"}], "-", 
+      RowBox[{"tauIhat", "*", "tauEhat"}]}], ",", " ", 
+     RowBox[{"tauE", "+", "tauI", "-", 
+      RowBox[{"(", 
+       RowBox[{"tauEhat", "+", "tauIhat"}], ")"}]}]}], "}"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"SEIRb", "\[Equal]", "0"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "alpha", ",", " ", "beta", ",", " ", "tauI", ",", " ", "tauE", ",", " ", 
+     "tauF"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9226280501874957`*^9, 3.9226282163239703`*^9}, {
+   3.9226944404540877`*^9, 3.922694441871564*^9}, 3.928254464048709*^9, {
+   3.9282545200202274`*^9, 3.9282545233421564`*^9}, {3.9282545643763857`*^9, 
+   3.928254590380595*^9}, {3.9282546325668974`*^9, 
+   3.928254637685356*^9}},ExpressionUUID->"b7f47fd9-e2c2-4bd4-af05-\
+2b1b48407b52"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"alpha", "-", "alphahat"}], ",", 
+    RowBox[{"beta", "-", "betahat"}], ",", 
+    RowBox[{"tauF", "-", "tauFhat"}], ",", 
+    RowBox[{
+     RowBox[{"tauE", " ", "tauI"}], "-", 
+     RowBox[{"tauEhat", " ", "tauIhat"}]}], ",", 
+    RowBox[{"tauE", "-", "tauEhat", "+", "tauI", "-", "tauIhat"}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.922693113552493*^9, 3.922694444005093*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"5a783168-7bf4-42de-ac55-3daafb187ffe"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"alpha", "\[Rule]", "alphahat"}], ",", 
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"tauI", "\[Rule]", "tauEhat"}], ",", 
+     RowBox[{"tauE", "\[Rule]", "tauIhat"}], ",", 
+     RowBox[{"tauF", "\[Rule]", "tauFhat"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"alpha", "\[Rule]", "alphahat"}], ",", 
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"tauI", "\[Rule]", "tauIhat"}], ",", 
+     RowBox[{"tauE", "\[Rule]", "tauEhat"}], ",", 
+     RowBox[{"tauF", "\[Rule]", "tauFhat"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.922693113552493*^9, 3.922694444045624*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"5aab77c4-b1a7-4fc8-bc0a-c30ea9bf882c"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "Finds", " ", "solution", " ", "sets", " ", "for", " ", "SEIRSb", " ", 
+   "model"}], "*)"}]], "Input",
+ CellChangeTimes->{
+  3.928254598470171*^9},ExpressionUUID->"3e6840c9-4279-4aea-be5b-\
+4eba0c1c8f31"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"SEIRSb", "=", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"alpha", "-", "alphahat"}], ",", " ", 
+     RowBox[{"beta", "-", "betahat"}], ",", 
+     RowBox[{"tauF", "-", "tauFhat"}], ",", " ", 
+     RowBox[{"tauR", "-", "tauRhat"}], ",", " ", 
+     RowBox[{
+      RowBox[{"tauI", "*", "tauE"}], "-", 
+      RowBox[{"tauIhat", "*", "tauEhat"}]}], ",", " ", 
+     RowBox[{"tauE", "+", "tauI", "-", 
+      RowBox[{"(", 
+       RowBox[{"tauEhat", "+", "tauIhat"}], ")"}]}]}], "}"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"SEIRSb", "\[Equal]", "0"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "alpha", ",", " ", "beta", ",", " ", "tauI", ",", " ", "tauE", ",", " ", 
+     "tauF", ",", " ", "tauR"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9227420629308395`*^9, 3.922742087848343*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"f29f7597-54c1-4f77-9b68-e40761924b83"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"alpha", "-", "alphahat"}], ",", 
+    RowBox[{"beta", "-", "betahat"}], ",", 
+    RowBox[{"tauF", "-", "tauFhat"}], ",", 
+    RowBox[{"tauR", "-", "tauRhat"}], ",", 
+    RowBox[{
+     RowBox[{"tauE", " ", "tauI"}], "-", 
+     RowBox[{"tauEhat", " ", "tauIhat"}]}], ",", 
+    RowBox[{"tauE", "-", "tauEhat", "+", "tauI", "-", "tauIhat"}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.9227420889293213`*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"2da3b53c-ea52-4b67-a093-f9fc6146e497"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"alpha", "\[Rule]", "alphahat"}], ",", 
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"tauI", "\[Rule]", "tauEhat"}], ",", 
+     RowBox[{"tauE", "\[Rule]", "tauIhat"}], ",", 
+     RowBox[{"tauF", "\[Rule]", "tauFhat"}], ",", 
+     RowBox[{"tauR", "\[Rule]", "tauRhat"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"alpha", "\[Rule]", "alphahat"}], ",", 
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"tauI", "\[Rule]", "tauIhat"}], ",", 
+     RowBox[{"tauE", "\[Rule]", "tauEhat"}], ",", 
+     RowBox[{"tauF", "\[Rule]", "tauFhat"}], ",", 
+     RowBox[{"tauR", "\[Rule]", "tauRhat"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9227420889961405`*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"3af1bd18-bf8b-426d-ac81-afd2a689b00e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "Finds", " ", "solution", " ", "sets", " ", "for", " ", "SEIR", " ", 
+   "model"}], "*)"}]], "Input",
+ CellChangeTimes->{
+  3.9282546033561172`*^9},ExpressionUUID->"6c4febc3-1aeb-433f-9619-\
+4d21909a5782"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"SEIR", "=", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "-", "betahat"}], ",", " ", 
+     RowBox[{
+      RowBox[{"tauI", "*", "tauE"}], "-", 
+      RowBox[{"tauIhat", "*", "tauEhat"}]}], ",", " ", 
+     RowBox[{"tauE", "+", "tauI", "-", 
+      RowBox[{"(", 
+       RowBox[{"tauEhat", "+", "tauIhat"}], ")"}]}]}], "}"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"SEIR", "\[Equal]", "0"}], ",", 
+   RowBox[{"{", " ", 
+    RowBox[{"beta", ",", " ", "tauI", ",", " ", "tauE"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.926770942700937*^9, 3.926770968405617*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"a8f75948-6cfd-4fec-9ff7-df89238e576c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"beta", "-", "betahat"}], ",", 
+    RowBox[{
+     RowBox[{"tauE", " ", "tauI"}], "-", 
+     RowBox[{"tauEhat", " ", "tauIhat"}]}], ",", 
+    RowBox[{"tauE", "-", "tauEhat", "+", "tauI", "-", "tauIhat"}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.9267709747161455`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"00b4e006-a8c4-4a38-b2ea-f128407b81df"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"tauI", "\[Rule]", "tauEhat"}], ",", 
+     RowBox[{"tauE", "\[Rule]", "tauIhat"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"tauI", "\[Rule]", "tauIhat"}], ",", 
+     RowBox[{"tauE", "\[Rule]", "tauEhat"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9267709747211685`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"3424d886-4567-4611-b516-48b2b034a47e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "Finds", " ", "solution", " ", "sets", " ", "for", " ", "SEIRS", " ", 
+   "model"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.928254611524223*^9, 
+  3.9282546120438433`*^9}},ExpressionUUID->"b603ee2c-0e85-4292-86fa-\
+3c55bbc6e7eb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"SEIRS", "=", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "-", "betahat"}], ",", " ", 
+     RowBox[{
+      RowBox[{"tauI", "*", "tauE"}], "-", 
+      RowBox[{"tauIhat", "*", "tauEhat"}]}], ",", " ", 
+     RowBox[{"tauE", "+", "tauI", "-", 
+      RowBox[{"(", 
+       RowBox[{"tauEhat", "+", "tauIhat"}], ")"}]}], ",", " ", 
+     RowBox[{"tauR", "-", "tauRhat"}]}], "}"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"SEIRS", "\[Equal]", "0"}], ",", 
+   RowBox[{"{", " ", 
+    RowBox[{"beta", ",", " ", "tauI", ",", " ", "tauE", ",", " ", "tauR"}], 
+    "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.926773045362842*^9, 3.9267730918730884`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"17235a26-9639-43b5-a946-300bf87ae4cb"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"beta", "-", "betahat"}], ",", 
+    RowBox[{
+     RowBox[{"tauE", " ", "tauI"}], "-", 
+     RowBox[{"tauEhat", " ", "tauIhat"}]}], ",", 
+    RowBox[{"tauE", "-", "tauEhat", "+", "tauI", "-", "tauIhat"}], ",", 
+    RowBox[{"tauR", "-", "tauRhat"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.926773087504467*^9, 3.9267730934532137`*^9}},
+ CellLabel->"Out[13]=",ExpressionUUID->"faa5e2b9-9115-4fe2-8752-056cc4b85ee4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"tauI", "\[Rule]", "tauEhat"}], ",", 
+     RowBox[{"tauE", "\[Rule]", "tauIhat"}], ",", 
+     RowBox[{"tauR", "\[Rule]", "tauRhat"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"beta", "\[Rule]", "betahat"}], ",", 
+     RowBox[{"tauI", "\[Rule]", "tauIhat"}], ",", 
+     RowBox[{"tauE", "\[Rule]", "tauEhat"}], ",", 
+     RowBox[{"tauR", "\[Rule]", "tauRhat"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.926773087504467*^9, 3.9267730934582386`*^9}},
+ CellLabel->"Out[14]=",ExpressionUUID->"2580aa8b-c243-4d8c-9eb7-bb3a37ab6e4a"]
+}, Open  ]]
+},
+WindowSize->{1920, 997},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1332, 33, 131, "Input",ExpressionUUID->"b7f47fd9-e2c2-4bd4-af05-2b1b48407b52"],
+Cell[1915, 57, 535, 13, 49, "Output",ExpressionUUID->"5a783168-7bf4-42de-ac55-3daafb187ffe"],
+Cell[2453, 72, 788, 18, 49, "Output",ExpressionUUID->"5aab77c4-b1a7-4fc8-bc0a-c30ea9bf882c"]
+}, Open  ]],
+Cell[3256, 93, 248, 7, 43, "Input",ExpressionUUID->"3e6840c9-4279-4aea-be5b-4eba0c1c8f31"],
+Cell[CellGroupData[{
+Cell[3529, 104, 950, 24, 73, "Input",ExpressionUUID->"f29f7597-54c1-4f77-9b68-e40761924b83"],
+Cell[4482, 130, 559, 14, 49, "Output",ExpressionUUID->"2da3b53c-ea52-4b67-a093-f9fc6146e497"],
+Cell[5044, 146, 870, 20, 79, "Output",ExpressionUUID->"3af1bd18-bf8b-426d-ac81-afd2a689b00e"]
+}, Open  ]],
+Cell[5929, 169, 248, 7, 43, "Input",ExpressionUUID->"6c4febc3-1aeb-433f-9619-4d21909a5782"],
+Cell[CellGroupData[{
+Cell[6202, 180, 738, 20, 73, "Input",ExpressionUUID->"a8f75948-6cfd-4fec-9ff7-df89238e576c"],
+Cell[6943, 202, 424, 11, 49, "Output",ExpressionUUID->"00b4e006-a8c4-4a38-b2ea-f128407b81df"],
+Cell[7370, 215, 560, 14, 49, "Output",ExpressionUUID->"3424d886-4567-4611-b516-48b2b034a47e"]
+}, Open  ]],
+Cell[7945, 232, 273, 7, 43, "Input",ExpressionUUID->"b603ee2c-0e85-4292-86fa-3c55bbc6e7eb"],
+Cell[CellGroupData[{
+Cell[8243, 243, 813, 21, 73, "Input",ExpressionUUID->"17235a26-9639-43b5-a946-300bf87ae4cb"],
+Cell[9059, 266, 490, 11, 49, "Output",ExpressionUUID->"faa5e2b9-9115-4fe2-8752-056cc4b85ee4"],
+Cell[9552, 279, 686, 16, 49, "Output",ExpressionUUID->"2580aa8b-c243-4d8c-9eb7-bb3a37ab6e4a"]
+}, Open  ]]
+}
+]
+*)
+
